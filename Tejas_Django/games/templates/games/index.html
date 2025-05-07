@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Games</title>
+  <link rel="stylesheet" href="{% static 'minigames/css/styles.css' %}">
+  <style>
+    /* styles.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 10vh;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.game-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem;
+  flex: 1;
+}
+
+.game-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 220px;
+  /* object-fit: cover; */
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.game-card:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-10px);
+}
+
+.game-card a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .game-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Mini Games</h1>
+  </header>
+  <div class="game-menu">
+    <div class="game-card">
+      <a href="/games/rps/">Rock Paper Scissors</a>
+    </div>
+    <div class="game-card">
+      <a href="/games/guess/">Guess the Number</a>
+    </div>
+    <div class="game-card">
+      <a href="/games/tictactoe/">Tic Tac Toe</a>
+    </div>
+  </div>
+
+</body>
+</html>

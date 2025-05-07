@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guess the Number</title>
+  <script src="/static/minigames/js/guess.js"></script>
+  <style>
+    /* styles.css - Enhance for Guess the Number */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-container {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  width: 90%;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.guess-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+input[type="number"] {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  text-align: center;
+  outline: none;
+}
+
+button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#guess-result {
+  font-size: 5rem;
+  min-height: 1.5rem;
+}
+</style>
+</head>
+<body>
+  <h1>Guess the Number (1-10)</h1>
+  <input type="number" id="guess" min="1" max="10">
+  <button onclick="checkGuess()">Guess</button>
+  <p id="feedback"></p>
+</body>
+</html>
